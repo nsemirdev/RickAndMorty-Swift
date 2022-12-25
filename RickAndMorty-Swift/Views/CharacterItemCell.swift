@@ -1,0 +1,65 @@
+//
+//  CharacterItemCell.swift
+//  RickAndMorty-Swift
+//
+//  Created by Emir Alkal on 26.12.2022.
+//
+
+import UIKit
+import SnapKit
+
+class CharacterItemCell: UICollectionViewCell {
+
+    let imageView: UIImageView = {
+        let imageView = UIImageView(image: UIImage(named: "1")!)
+        imageView.contentMode = .scaleAspectFit
+        imageView.backgroundColor = .brown
+        imageView.layer.cornerRadius = 5
+        imageView.clipsToBounds = true
+        return imageView
+    }()
+    
+    let nameLabel: UILabel = {
+        let lbl = UILabel()
+        lbl.font = .systemFont(ofSize: 17, weight: .thin)
+        lbl.textColor = .white
+        lbl.text = "Morty"
+        return lbl
+    }()
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        configure()
+        
+    }
+    
+    
+    private func configure() {
+        layer.borderWidth = 1
+        layer.borderColor = UIColor.gray.cgColor
+        layer.cornerRadius = 8
+        
+        
+        addSubview(imageView)
+        
+        imageView.snp.makeConstraints { make in
+            make.leading.equalTo(snp.leadingMargin)
+            make.top.equalTo(snp.topMargin)
+            make.trailing.equalTo(snp.trailingMargin)
+            make.height.equalTo(imageView.snp.width)
+        }
+        
+        addSubview(nameLabel)
+        
+        nameLabel.snp.makeConstraints { make in
+            make.leading.equalTo(imageView.snp.leading)
+            make.top.equalTo(imageView.snp.bottom).offset(8)
+        }
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    
+}

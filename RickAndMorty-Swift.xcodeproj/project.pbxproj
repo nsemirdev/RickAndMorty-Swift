@@ -12,6 +12,8 @@
 		FB78ABBA2958F155000FC937 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB78ABB92958F155000FC937 /* ViewController.swift */; };
 		FB78ABBF2958F157000FC937 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB78ABBE2958F157000FC937 /* Assets.xcassets */; };
 		FB78ABC22958F157000FC937 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB78ABC02958F157000FC937 /* LaunchScreen.storyboard */; };
+		FB78ABD12958F3AD000FC937 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = FB78ABD02958F3AD000FC937 /* SnapKit */; };
+		FB78ABD32958F7A7000FC937 /* CharacterItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB78ABD22958F7A7000FC937 /* CharacterItemCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,7 @@
 		FB78ABBE2958F157000FC937 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB78ABC12958F157000FC937 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FB78ABC32958F157000FC937 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB78ABD22958F7A7000FC937 /* CharacterItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterItemCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB78ABD12958F3AD000FC937 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +93,7 @@
 		FB78ABCC2958F229000FC937 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FB78ABD22958F7A7000FC937 /* CharacterItemCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -128,6 +133,9 @@
 			dependencies = (
 			);
 			name = "RickAndMorty-Swift";
+			packageProductDependencies = (
+				FB78ABD02958F3AD000FC937 /* SnapKit */,
+			);
 			productName = "RickAndMorty-Swift";
 			productReference = FB78ABB22958F155000FC937 /* RickAndMorty-Swift.app */;
 			productType = "com.apple.product-type.application";
@@ -156,6 +164,9 @@
 				Base,
 			);
 			mainGroup = FB78ABA92958F155000FC937;
+			packageReferences = (
+				FB78ABCF2958F3AD000FC937 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = FB78ABB32958F155000FC937 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -184,6 +195,7 @@
 			files = (
 				FB78ABBA2958F155000FC937 /* ViewController.swift in Sources */,
 				FB78ABB62958F155000FC937 /* AppDelegate.swift in Sources */,
+				FB78ABD32958F7A7000FC937 /* CharacterItemCell.swift in Sources */,
 				FB78ABB82958F155000FC937 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -392,6 +404,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FB78ABCF2958F3AD000FC937 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FB78ABD02958F3AD000FC937 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FB78ABCF2958F3AD000FC937 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FB78ABAA2958F155000FC937 /* Project object */;
 }
