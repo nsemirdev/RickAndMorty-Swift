@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class ViewController: UIViewController {
+class CharactersViewController: UIViewController {
     
     var characterArray = [Character]() {
         didSet {
@@ -54,6 +54,7 @@ class ViewController: UIViewController {
         view.addSubview(collectionView)
         collectionView.register(CharacterItemCell.self, forCellWithReuseIdentifier: "cellId")
         collectionView.dataSource = self
+        collectionView.delegate = self
         
         collectionView.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
@@ -66,7 +67,7 @@ class ViewController: UIViewController {
 
 // MARK: - CollectionView Configuration
 
-extension ViewController: UICollectionViewDataSource {
+extension CharactersViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         characterArray.count
     }
@@ -80,10 +81,15 @@ extension ViewController: UICollectionViewDataSource {
         item.character = characterArray[indexPath.row]
         return item
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let detailVC = DetailViewController()
+        detailVC.character = characterArray[indexPath.row]
+        navigationController?.pushViewController(detailVC, animated: true)
+    }
 }
 
-
-extension ViewController: CharactersViewModelDelegate {
+extension CharactersViewController: CharactersViewModelDelegate {
     func fetchDidSuccess(_ vm: CharactersViewModel, fetchResultWithCharacters: CharacterCollection) {
         self.characterArray += fetchResultWithCharacters.results
     }

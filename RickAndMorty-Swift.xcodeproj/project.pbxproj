@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		FB78ABB62958F155000FC937 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB78ABB52958F155000FC937 /* AppDelegate.swift */; };
 		FB78ABB82958F155000FC937 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB78ABB72958F155000FC937 /* SceneDelegate.swift */; };
-		FB78ABBA2958F155000FC937 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB78ABB92958F155000FC937 /* ViewController.swift */; };
+		FB78ABBA2958F155000FC937 /* CharactersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB78ABB92958F155000FC937 /* CharactersViewController.swift */; };
 		FB78ABBF2958F157000FC937 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB78ABBE2958F157000FC937 /* Assets.xcassets */; };
 		FB78ABC22958F157000FC937 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB78ABC02958F157000FC937 /* LaunchScreen.storyboard */; };
 		FB78ABD12958F3AD000FC937 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = FB78ABD02958F3AD000FC937 /* SnapKit */; };
@@ -18,13 +18,14 @@
 		FB78ABD72958FD30000FC937 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB78ABD62958FD30000FC937 /* Character.swift */; };
 		FB78ABDA29590644000FC937 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = FB78ABD929590644000FC937 /* SDWebImage */; };
 		FB78ABDC2959076A000FC937 /* CharactersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB78ABDB2959076A000FC937 /* CharactersViewModel.swift */; };
+		FB78ABDE29590B4C000FC937 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB78ABDD29590B4C000FC937 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FB78ABB22958F155000FC937 /* RickAndMorty-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RickAndMorty-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB78ABB52958F155000FC937 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB78ABB72958F155000FC937 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FB78ABB92958F155000FC937 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FB78ABB92958F155000FC937 /* CharactersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewController.swift; sourceTree = "<group>"; };
 		FB78ABBE2958F157000FC937 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB78ABC12958F157000FC937 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FB78ABC32958F157000FC937 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -32,6 +33,7 @@
 		FB78ABD42958FC3D000FC937 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		FB78ABD62958FD30000FC937 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		FB78ABDB2959076A000FC937 /* CharactersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewModel.swift; sourceTree = "<group>"; };
+		FB78ABDD29590B4C000FC937 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +97,8 @@
 		FB78ABCB2958F223000FC937 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				FB78ABB92958F155000FC937 /* ViewController.swift */,
+				FB78ABB92958F155000FC937 /* CharactersViewController.swift */,
+				FB78ABDD29590B4C000FC937 /* DetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -206,13 +209,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB78ABBA2958F155000FC937 /* ViewController.swift in Sources */,
+				FB78ABBA2958F155000FC937 /* CharactersViewController.swift in Sources */,
 				FB78ABDC2959076A000FC937 /* CharactersViewModel.swift in Sources */,
 				FB78ABB62958F155000FC937 /* AppDelegate.swift in Sources */,
 				FB78ABD32958F7A7000FC937 /* CharacterItemCell.swift in Sources */,
 				FB78ABD72958FD30000FC937 /* Character.swift in Sources */,
 				FB78ABD52958FC3D000FC937 /* APICaller.swift in Sources */,
 				FB78ABB82958F155000FC937 /* SceneDelegate.swift in Sources */,
+				FB78ABDE29590B4C000FC937 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

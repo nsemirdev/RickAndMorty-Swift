@@ -20,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     private func makeNavController() -> UINavigationController {
-        let navController = UINavigationController(rootViewController: ViewController())
+        let navController = UINavigationController(rootViewController: CharactersViewController())
         navController.navigationBar.prefersLargeTitles = true
         return navController
     }
