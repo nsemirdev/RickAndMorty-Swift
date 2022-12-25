@@ -14,6 +14,10 @@
 		FB78ABC22958F157000FC937 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB78ABC02958F157000FC937 /* LaunchScreen.storyboard */; };
 		FB78ABD12958F3AD000FC937 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = FB78ABD02958F3AD000FC937 /* SnapKit */; };
 		FB78ABD32958F7A7000FC937 /* CharacterItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB78ABD22958F7A7000FC937 /* CharacterItemCell.swift */; };
+		FB78ABD52958FC3D000FC937 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB78ABD42958FC3D000FC937 /* APICaller.swift */; };
+		FB78ABD72958FD30000FC937 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB78ABD62958FD30000FC937 /* Character.swift */; };
+		FB78ABDA29590644000FC937 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = FB78ABD929590644000FC937 /* SDWebImage */; };
+		FB78ABDC2959076A000FC937 /* CharactersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB78ABDB2959076A000FC937 /* CharactersViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +29,9 @@
 		FB78ABC12958F157000FC937 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FB78ABC32958F157000FC937 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB78ABD22958F7A7000FC937 /* CharacterItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterItemCell.swift; sourceTree = "<group>"; };
+		FB78ABD42958FC3D000FC937 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
+		FB78ABD62958FD30000FC937 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		FB78ABDB2959076A000FC937 /* CharactersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB78ABDA29590644000FC937 /* SDWebImage in Frameworks */,
 				FB78ABD12958F3AD000FC937 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -71,6 +79,7 @@
 		FB78ABC92958F215000FC937 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				FB78ABD62958FD30000FC937 /* Character.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -78,6 +87,7 @@
 		FB78ABCA2958F21D000FC937 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				FB78ABDB2959076A000FC937 /* CharactersViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -101,6 +111,7 @@
 		FB78ABCD2958F22D000FC937 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				FB78ABD42958FC3D000FC937 /* APICaller.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -135,6 +146,7 @@
 			name = "RickAndMorty-Swift";
 			packageProductDependencies = (
 				FB78ABD02958F3AD000FC937 /* SnapKit */,
+				FB78ABD929590644000FC937 /* SDWebImage */,
 			);
 			productName = "RickAndMorty-Swift";
 			productReference = FB78ABB22958F155000FC937 /* RickAndMorty-Swift.app */;
@@ -166,6 +178,7 @@
 			mainGroup = FB78ABA92958F155000FC937;
 			packageReferences = (
 				FB78ABCF2958F3AD000FC937 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				FB78ABD829590644000FC937 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = FB78ABB32958F155000FC937 /* Products */;
 			projectDirPath = "";
@@ -194,8 +207,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB78ABBA2958F155000FC937 /* ViewController.swift in Sources */,
+				FB78ABDC2959076A000FC937 /* CharactersViewModel.swift in Sources */,
 				FB78ABB62958F155000FC937 /* AppDelegate.swift in Sources */,
 				FB78ABD32958F7A7000FC937 /* CharacterItemCell.swift in Sources */,
+				FB78ABD72958FD30000FC937 /* Character.swift in Sources */,
+				FB78ABD52958FC3D000FC937 /* APICaller.swift in Sources */,
 				FB78ABB82958F155000FC937 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,6 +430,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		FB78ABD829590644000FC937 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -421,6 +445,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = FB78ABCF2958F3AD000FC937 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		FB78ABD929590644000FC937 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FB78ABD829590644000FC937 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

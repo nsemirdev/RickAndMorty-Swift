@@ -10,24 +10,35 @@ import SnapKit
 
 class ViewController: UIViewController {
     
+    var characterArray = [Character]() {
+        didSet {
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
+            }
+        }
+    }
+    
+    var viewModel = CharactersViewModel()
+    
     // MARK: - UI Elements
     
     let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.sectionInset = .init(top: 5, left: 5, bottom: 5, right: 5)
-        layout.itemSize = .init(width: 110, height: 140)
+        layout.itemSize = .init(width: 110, height: 160)
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.backgroundColor = .systemTeal
         return collectionView
     }()
     
-
     // MARK: - Functions
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
         setupView()
+        viewModel.delegate = self
+        viewModel.fetchCharactersRequest()
     }
 
     fileprivate func setupNavigationBar() {
@@ -57,12 +68,27 @@ class ViewController: UIViewController {
 
 extension ViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        30
+        characterArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let item = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath) as! CharacterItemCell
+        if indexPath.item == characterArray.count - 1 {
+            viewModel.fetchCharactersRequest()
+        }
         
+        let item = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath) as! CharacterItemCell
+        item.character = characterArray[indexPath.row]
         return item
+    }
+}
+
+
+extension ViewController: CharactersViewModelDelegate {
+    func fetchDidSuccess(_ vm: CharactersViewModel, fetchResultWithCharacters: CharacterCollection) {
+        self.characterArray += fetchResultWithCharacters.results
+    }
+    
+    func fetchFailWithError(_ vm: CharactersViewModel, errorMessage: String) {
+        print(errorMessage)
     }
 }
