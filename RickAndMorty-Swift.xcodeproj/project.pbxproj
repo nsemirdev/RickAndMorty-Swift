@@ -54,14 +54,62 @@
 		FB78ABB42958F155000FC937 /* RickAndMorty-Swift */ = {
 			isa = PBXGroup;
 			children = (
+				FB78ABCE2958F232000FC937 /* Resources */,
+				FB78ABCD2958F22D000FC937 /* Managers */,
+				FB78ABCC2958F229000FC937 /* Views */,
+				FB78ABCB2958F223000FC937 /* Controllers */,
+				FB78ABCA2958F21D000FC937 /* ViewModels */,
+				FB78ABC92958F215000FC937 /* Models */,
+			);
+			path = "RickAndMorty-Swift";
+			sourceTree = "<group>";
+		};
+		FB78ABC92958F215000FC937 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FB78ABCA2958F21D000FC937 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		FB78ABCB2958F223000FC937 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FB78ABB92958F155000FC937 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FB78ABCC2958F229000FC937 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FB78ABCD2958F22D000FC937 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		FB78ABCE2958F232000FC937 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				FB78ABB52958F155000FC937 /* AppDelegate.swift */,
 				FB78ABB72958F155000FC937 /* SceneDelegate.swift */,
-				FB78ABB92958F155000FC937 /* ViewController.swift */,
 				FB78ABBE2958F157000FC937 /* Assets.xcassets */,
 				FB78ABC02958F157000FC937 /* LaunchScreen.storyboard */,
 				FB78ABC32958F157000FC937 /* Info.plist */,
 			);
-			path = "RickAndMorty-Swift";
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,7 +325,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HG8VJQPKXZ;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "RickAndMorty-Swift/Info.plist";
+				INFOPLIST_FILE = "RickAndMorty-Swift/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -304,7 +352,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HG8VJQPKXZ;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "RickAndMorty-Swift/Info.plist";
+				INFOPLIST_FILE = "RickAndMorty-Swift/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
